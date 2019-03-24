@@ -1,4 +1,4 @@
-package com.xl.springBootDemo.hello;
+package com.xl.springBootDemo.bean.hello;
 
 public class Greeting {
     private final long id;
