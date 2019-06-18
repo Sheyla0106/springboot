@@ -1,0 +1,38 @@
+#注意格式，设置为utf-8
+#----------------swagger配置-----------------------
+swagger:
+  enable: true
+#swagger.enable=true
+#----------------mysql配置----------------------
+
+#你的实体类包名 （例子项目的包名是com.shizhao.project.springdemo.model）
+#mybatis.typeAliasesPackage=com.xl.springBootDemo.bean
+#mybatis.mapperLocations=classpath*:/com/xl/springBootDemo/dao/**/*.xml
+
+#端口号
+server:
+  port: 82
+
+#数据库链接设置
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/zxl?serverTimezone=Asia/Shanghai
+    username: root
+    password: 1234
+
+#整合Mybatis
+mybatis:
+  #  扫描数据持久对应的实体类 路径 Package级别
+  type-aliases-package: com.xl.springBootDemo.bean
+  #  mybatis 对应的 .xml文件路径
+  mapper-locations: classpath*:/com/xl/springBootDemo/dao/**/*.xml
+#  多层级目录  mapper-locations: classpath:mapper/**/**.xml
+
+
+#  打印 sql 扫描dao层
+logging:
+  level:
+    com:
+      xl:
+        springBootDemo:
+          dao: debug

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--namespace 路径 指向dao层接口-->
+<mapper namespace="com.xl.springBootDemo.dao.user.UserDao">
+
+
+    <!--resultType 指向entity中对应的实体-->
+    <select id="getUserById" resultType="com.xl.springBootDemo.bean.user.UserBean">
+        select
+        <include refid="Base_Column_List"></include>
+        from d_user
+    </select>
+    <sql id="Base_Column_List">
+          id,name,user_id,creator,create_time,status
+  </sql>
+
+</mapper>

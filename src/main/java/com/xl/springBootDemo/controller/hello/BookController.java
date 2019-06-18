@@ -17,9 +17,9 @@ public class BookController {
 
     Map<Long, Book> books = Collections.synchronizedMap(new HashMap<Long, Book>());
 
-    @ApiOperation(value="创建图书", notes="创建图书")
+    @ApiOperation(value = "创建图书", notes = "创建图书")
     @ApiImplicitParam(name = "book", value = "图书详细实体", required = true, dataType = "Book")
-    @RequestMapping(value="", method= RequestMethod.POST)
+    @RequestMapping(value = "", method = RequestMethod.POST)
     public String postBook(@RequestBody Book book) {
         books.put(book.getId(), book);
         return "success";
