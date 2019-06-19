@@ -11,7 +11,7 @@ swagger:
 
 #端口号
 server:
-  port: 82
+  port: 8081
 
 #数据库链接设置
 spring:
@@ -28,11 +28,10 @@ mybatis:
   mapper-locations: classpath*:/com/xl/springBootDemo/dao/**/*.xml
 #  多层级目录  mapper-locations: classpath:mapper/**/**.xml
 
-
 #  打印 sql 扫描dao层
-logging:
-  level:
-    com:
-      xl:
-        springBootDemo:
-          dao: debug
+#logging:
+#  level:
+#    com:
+#      xl:
+#       springBootDemo:
+#          dao: debug
