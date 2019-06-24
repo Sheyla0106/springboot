@@ -19,6 +19,10 @@ spring:
     url: jdbc:mysql://localhost:3306/zxl?serverTimezone=Asia/Shanghai
     username: root
     password: 1234
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
 
 #整合Mybatis
 mybatis:
@@ -35,3 +39,5 @@ mybatis:
 #      xl:
 #       springBootDemo:
 #          dao: debug
+
+#redis设置
